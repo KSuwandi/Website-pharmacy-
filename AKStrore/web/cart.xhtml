@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="resources/style/main_style.css" rel="stylesheet"/>
+        <ui:include src="layout/header.xhtml"/>
+        
+    </h:head>
+    <h:body>
+        <ui:include src="layout/navbar.xhtml"/>
+        
+          <div class="container-fluid">
+            <div class="main_slider row center">
+                <div class="col-md-12">
+                     <h3 class="mt-5 mb-5 text-center"> CART </h3>
+                     <h:form>
+                        <h:dataTable  
+                                     value="" var="item" class="table table-stripped pd-5">
+                        <h:column>
+                            <f:facet name="header"> ID </f:facet>
+                            #{stock.idstk}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header"> Nama Barang </f:facet>
+                            #{stock.namastock}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header"> Harga Barang </f:facet>
+                            #{stock.pricestock}
+                        </h:column>                            
+                        
+                    </h:dataTable>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+      
+        
+        
+        
+        <ui:include src="layout/footer.xhtml"/>
+        <ui:include src="layout/script.xhtml"/>         
+    </h:body>
+</html>
+

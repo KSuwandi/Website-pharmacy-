@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="resources/style/main_style.css" rel="stylesheet"/>
+        <ui:include src="layout/header.xhtml"/>
+        
+       
+    </h:head>
+    <h:body>
+        <ui:include src="layout/admnavbar.xhtml"/>
+        <div class="super_container">
+            <div class="container">
+                <div class="blogs  row ">
+                    <div class="col-md-12 mt-5 mt-3">                        
+                        <h3> Input Product</h3>
+                        <h:form>
+                            <div class="form-group">
+                                <label>Search by ID</label>
+                                <h:inputText class="form-control" value="#{stock.idstk}"/><br/>
+                                <h:commandButton class="btn btn-sm btn-primary" value="search" action="#{stock.getbyID2()}"/>
+                            </div>
+                            <div class="form-group">
+                                <label>Name</label>
+                                <h:inputText id="Nama" class="form-control" value="#{stock.namastock}">
+                                 \
+                                </h:inputText><br/>
+                                
+                            </div>
+                            <div class="form-group">
+                                <label>Type</label>
+                                <h:selectOneMenu class="form-control" value="#{stock.typestock}">
+                                    <f:selectItem itemValue="Staple Food" itemLabel="Staple Food - Item"/>
+                                    <f:selectItem itemValue="Snack" itemLabel="Snack - Item"/>
+                                    <f:selectItem itemValue="Clothing" itemLabel="Clothing - Item"/>
+                                    <f:selectItem itemValue="Electronic"/>
+                                </h:selectOneMenu><br/>
+                            </div>   
+                            <div class="form-group">
+                                <lablel>Price</lablel>
+                                <h:inputText id="price" class="form-control" value="#{stock.pricestock}">
+                                
+                                </h:inputText><br/>
+                                
+                            </div>
+                            <div class="form-group">
+                                <lablel>Stock</lablel>
+                                <h:inputText id="stock" class="form-control" value="#{stock.jmlstock}">
+                                
+                                </h:inputText><br/>
+                                
+                            </div>
+                            <div class="form-group">
+                                <lablel>Expired Date</lablel>
+                                <h:inputText id="exp" class="form-control" value="#{stock.expstock}">
+                                
+                                </h:inputText><br/>
+                                
+                            </div>
+                            <div class="form-group">
+                                <h:commandButton class="btn btn-sm btn-primary" value="Save" type="submit" action="#{stock.save()}"/> &nbsp;                               
+                                <h:commandButton class="btn btn-sm btn-primary" value="Update" action="#{stock.update()}"/>&nbsp;                                                                                                
+                                <h:commandButton class="btn btn-sm btn-danger" value="reset" type="reset"/>&nbsp;
+                                <h:commandButton class="btn btn-sm btn-danger" value="Delete" action="#{stock.delete()}"/>
+                            </div>
+                        </h:form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ui:include src="layout/footer.xhtml"/>
+        <ui:include src="layout/script.xhtml"/>
+    </h:body>
+</html>
+

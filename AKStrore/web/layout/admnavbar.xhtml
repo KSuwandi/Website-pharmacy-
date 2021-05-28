@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="resources/style/main_style.css" rel="stylesheet"/>
+        <ui:include src="header.xhtml"/>
+
+    </h:head>
+    <h:body>
+        <header class="header trans_300">
+
+    <!-- Main Navigation -->
+
+        <div class="main_nav_container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-right">
+                        <div class="logo_container">
+                            <h:outputLink value="index.xhtml"> Kelontong<span> Store Admin</span></h:outputLink>
+                        </div>
+                        <nav class="navbar">
+                            <ul class="navbar_menu">
+                                <li><h:outputLink value="Stock.xhtml">Stock</h:outputLink></li>								
+                                <li><h:outputLink value="Newadm.xhtml"> Create New Admin</h:outputLink></li>								
+                                <li><h:outputLink value="restock.xhtml">ReStock</h:outputLink></li>                           
+                                <li class="account">
+                                    <h:outputLink value="account.xhtml">
+                                        About User
+                                        <i class="fa fa-angle-down"></i>
+                                    </h:outputLink>
+                                    <ul class="account_selection">
+                                       
+                                            <li><h:outputLink value="userall.xhtml"><i class="fa fa-sign-in" aria-hidden="true"></i>User Data</h:outputLink></li>
+                                            <li><h:outputLink value="adminall.xhtml"><i class="fa fa-sign-in" aria-hidden="true"></i>Admin Data</h:outputLink></li>                                                                                    
+                                            <li><h:outputLink value="Logadmin.xhtml"><i class="fa fa-user-plus" aria-hidden="true"></i>Logout</h:outputLink></li>
+                                       
+                                    </ul>
+                                </li>
+                            </ul>                            						
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    </h:body>
+</html>
+
